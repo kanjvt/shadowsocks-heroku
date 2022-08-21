@@ -5,37 +5,25 @@ Click the button below to deploy to Heroku
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/kanjvt/shadowsocks-heroku/tree/main)
 
-## 0. Attention
+## 1. Verifikasi
 
-Deployment requires registration of a heroku account, a email is required when registering a heroku account (otherwise the verification code cannot be brushed out). 
-
-An email address that can receive verification codes normally (@qq.com, @163.com are not acceptable):
-- gmail (Best) 
-- Outlook <https://login.live.com/> here.
-
-## 1. Verification
-
-After the server is deployed, open app to display the webpage normally. After the address is filled with the path (for example: <https://test.herokuapp.com/static>), the 403 page is displayed, which means the deployment is successful.
+https://test.herokuapp.com jika tampil 403 artinya sudah sukses deploy
 
 ## 2. Client Configuration
 
 QR code address: https://test.herokuapp.com/qr/vpn.png
 
-(Change test to your own app name. If you changed the QR\_Path (path to qr png, filled during deployment) variable, also change the corresponding qr\_img to the modified one)
+pake shadowshock untuk scan qr code (rekomen)
 
-Use the client (Shadowsocks recommended) to scan the QR code.
+**atau**
 
-**or**
+konfigurasi file -> Address: https://test.herokuapp.com/qr/
 
-Use Configuration file -> Address: https://test.herokuapp.com/qr/
+copy semua ke shadowshock
 
-(Change test to your own app name)
+**atau**
 
-Copy the details after opening and import it to the client.
-
-**or**
-
-Manual configuration:
+Manual konfigurasi :
 
 ```sh
 Server: test.herokuapp.com (change test to your app name)
@@ -48,7 +36,7 @@ Hostname: Same as Server
 Path: "/" + value of V2_Path in app Config Vars
 ```
 
-Those without a client can also download from here (Android):
+tools untuk android :
 
 [shadowsocks](https://github.com/shadowsocks/shadowsocks-android/releases/latest/download/shadowsocks--universal-5.1.9.apk)
 
@@ -57,13 +45,3 @@ Those without a client can also download from here (Android):
 windows:
 
 <https://github.com/shadowsocks/shadowsocks-windows/wiki/Shadowsocks-Windows-%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E>
-
-# Reference
-
-https://github.com/ygcaicn/ss-heroku
-
-https://github.com/xiangrui120/v2ray-heroku-undone
-
-https://hub.docker.com/r/shadowsocks/shadowsocks-libev
-
-https://github.com/shadowsocks/v2ray-plugin
