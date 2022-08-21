@@ -1,15 +1,13 @@
 # Personal VPN
 ## Shadowsocks+V2Ray-plugin
 
-Click the button below to deploy to Heroku
-
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/kanjvt/shadowsocks-heroku/tree/main)
 
 ## 1. Verifikasi
 
 https://test.herokuapp.com jika tampil 403 artinya sudah sukses deploy
 
-## 2. Client Configuration
+## 2. Konfigurasi
 
 QR code address: https://test.herokuapp.com/qr/vpn.png
 
@@ -26,13 +24,13 @@ copy semua ke shadowshock
 Manual konfigurasi :
 
 ```sh
-Server: test.herokuapp.com (change test to your app name)
+Server: test.herokuapp.com
 Port: 443
-Password: The password filled in during deployment
+Password: pass yg tadi deploy
 Encry Method: chacha20-ietf-poly1305 (or other methods you fill in)
 Plugin: v2ray
 Plugin Transport mode: websocket-tls
-Hostname: Same as Server
+Hostname: sama dgn server
 Path: "/" + value of V2_Path in app Config Vars
 ```
 
